@@ -1,9 +1,11 @@
 import tkinter as tk
 
+# main window of our calculator
 window = tk.Tk()
 window.title("Calculator App")
 window.geometry("300x250")
 
+# add function for the addition of two numbers
 def add():
   res_box.delete(1.0,"end")
   try:
@@ -11,6 +13,7 @@ def add():
   except ValueError:
     res_box.insert(tk.INSERT, "Number required")
 
+# sub function for subtracking two numbers
 def sub():
   res_box.delete(1.0,"end")
   try:
@@ -18,6 +21,7 @@ def sub():
   except ValueError:
     res_box.insert(tk.INSERT, "Number required!")
 
+# all elements inside the window
 lbl_nr_one = tk.Label(window, text="Enter the first number:", bg="green")
 lbl_nr_one.pack(padx=5, pady=5)
 
